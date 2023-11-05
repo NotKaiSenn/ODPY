@@ -1,0 +1,11 @@
+[Unit]
+Description=OpenDoctoratePy
+After=network.target
+
+[Service]
+WorkingDirectory=/OpenDoctoratePy/
+Environment="PYTHONPATH=/OpenDoctoratePy/server/"
+ExecStart=/OpenDoctoratePy/venv/bin/gunicorn -b [::]:8443 --workers 1 --threads 4 server.app:app
+
+[Install]
+WantedBy=multi-user.target

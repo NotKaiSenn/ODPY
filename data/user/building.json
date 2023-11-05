@@ -1,0 +1,250 @@
+{
+    "roomSlots": {
+        "slot_34": {
+            "level": 5,
+            "state": 2,
+            "roomId": "CONTROL",
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_36": {
+            "level": 3,
+            "state": 2,
+            "roomId": "MEETING",
+            "charInstIds": [
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_23": {
+            "level": 3,
+            "state": 2,
+            "roomId": "HIRE",
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_16": {
+            "level": 3,
+            "state": 2,
+            "roomId": "TRADING",
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_15": {
+            "level": 3,
+            "state": 2,
+            "roomId": "MANUFACTURE",
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_14": {
+            "level": 3,
+            "state": 2,
+            "roomId": "MANUFACTURE",
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_7": {
+            "level": 3,
+            "state": 2,
+            "roomId": "TRADING",
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_6": {
+            "level": 3,
+            "state": 2,
+            "roomId": "MANUFACTURE",
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_5": {
+            "level": 3,
+            "state": 2,
+            "roomId": "MANUFACTURE",
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_13": {
+            "level": 3,
+            "state": 2,
+            "roomId": "TRAINING",
+            "charInstIds": [
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_28": {
+            "level": 5,
+            "state": 2,
+            "roomId": "DORMITORY",
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_20": {
+            "level": 5,
+            "state": 2,
+            "roomId": "DORMITORY",
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_9": {
+            "level": 5,
+            "state": 2,
+            "roomId": "DORMITORY",
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_3": {
+            "level": 5,
+            "state": 2,
+            "roomId": "DORMITORY",
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_26": {
+            "level": 3,
+            "state": 2,
+            "roomId": "POWER",
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_25": {
+            "level": 3,
+            "state": 2,
+            "roomId": "POWER",
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_24": {
+            "level": 3,
+            "state": 2,
+            "roomId": "POWER",
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1
+        },
+        "slot_32": {
+            "level": 3,
+            "state": 2,
+            "roomId": "WORKSHOP",
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1
+        }
+    },
+    "rooms": {
+        "CONTROL": {
+            "slot_34": {}
+        },
+        "MEETING": {
+            "slot_36": {}
+        },
+        "HIRE": {
+            "slot_23": {}
+        },
+        "TRADING": {
+            "slot_16": {},
+            "slot_7": {}
+        },
+        "MANUFACTURE": {
+            "slot_15": {},
+            "slot_14": {},
+            "slot_6": {},
+            "slot_5": {}
+        },
+        "TRAINING": {
+            "slot_13": {
+                "trainee": {
+                    "charInstId": -1,
+                    "state": 0,
+                    "targetSkill": -1,
+                    "processPoint": -1,
+                    "speed": 1
+                },
+                "trainer": {
+                    "charInstId": -1,
+                    "state": 0
+                }
+            }
+        },
+        "DORMITORY": {
+            "slot_28": {},
+            "slot_20": {},
+            "slot_9": {},
+            "slot_3": {}
+        },
+        "POWER": {
+            "slot_26": {},
+            "slot_25": {},
+            "slot_24": {}
+        },
+        "WORKSHOP": {
+            "slot_32": {}
+        }
+    }
+}

@@ -1,0 +1,5 @@
+flask
+requests
+frida
+pure-python-adb
+pycryptodome
