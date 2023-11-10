@@ -55,7 +55,7 @@
             },
             {
                 "charId": "char_1026_gvial2",
-                "skillIndex": 2,
+                "skillIndex": 1,
                 "currentEquip": "uniequip_002_gvial2"
             },
             {
@@ -122,7 +122,7 @@
             {
                 "charId": "char_311_mudrok",
                 "skillIndex": 1,
-                "currentEquip": null
+                "currentEquip": "uniequip_002_mudrok"
             },
             {
                 "charId": "char_202_demkni",
