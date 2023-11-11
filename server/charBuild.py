@@ -1,4 +1,4 @@
-import time
+from faketime import time
 
 from flask import request
 
@@ -24,7 +24,7 @@ def charBuildaddonStoryUnlock():
     data = request.data
     request_data = request.get_json()
 
-    ts = {"fts": int(time.time()), "rts": int(time.time())} # TODO
+    ts = {"fts": int(time()), "rts": int(time())} # TODO
 
     data = {
         "playerDataDelta": {

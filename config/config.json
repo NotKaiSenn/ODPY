@@ -94,10 +94,11 @@
         },
         "activity": "act29side",
         "activityStartTs": "1698811200",
-        "secretary": "char_249_mlyss",
-        "secretarySkinId": "char_249_mlyss#2",
-        "background": "bg_rhodes_night",
-        "theme": "tm_rhodes_night"
+        "secretary": "char_245_cello",
+        "secretarySkinId": "char_245_cello#2",
+        "background": "bg_kalts_1",
+        "theme": "tm_mainline_1",
+        "fakeTime": -1
     },
     "charConfig": {
         "favorPoint": 25570,

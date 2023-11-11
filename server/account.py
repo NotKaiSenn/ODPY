@@ -1,6 +1,6 @@
 import json
 from os.path import exists
-from time import time
+from faketime import time
 from copy import deepcopy
 from base64 import b64encode
 from hashlib import md5
@@ -569,9 +569,11 @@ def accountSyncData():
     player_data["user"]["dexNav"]["enemy"]["enemies"] = enemies
 
     for i in activity_table["activity"]:
-        player_data["user"]["activity"][i] = {}
+        if i not in player_data["user"]["activity"]:
+            player_data["user"]["activity"][i] = {}
         for j in activity_table["activity"][i]:
-            player_data["user"]["activity"][i][j] = {}
+            if j not in player_data["user"]["activity"][i]:
+                player_data["user"]["activity"][i][j] = {}
 
     write_json(player_data, USER_JSON_PATH)
 

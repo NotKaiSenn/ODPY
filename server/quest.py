@@ -1,4 +1,4 @@
-from time import time
+from faketime import time
 
 from flask import request
 

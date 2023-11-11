@@ -6,7 +6,7 @@ from flask import request
 from constants import USER_JSON_PATH
 from utils import read_json, write_json
 
-import time
+from faketime import time
 
 
 def userCheckIn():
@@ -284,7 +284,7 @@ def general_v1_server_time():
         "status": 0,
         "msg": "OK",
         "data": {
-            "serverTime": int(time.time()),
+            "serverTime": int(time()),
             "isHoliday": False
         }
     }

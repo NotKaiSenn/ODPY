@@ -1,5 +1,3 @@
-from time import time
-
 from flask import request
 
 from utils import read_json, write_json
