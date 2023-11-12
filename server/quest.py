@@ -175,7 +175,7 @@ def questSquadFormation():
 def questGetAssistList():
 
     data = request.data
-    assist_unit_configs = read_json(CONFIG_PATH)["charConfig"]["assistUnits"]
+    assist_unit_configs = read_json(CONFIG_PATH)["assistUnits"]
     saved_data = read_json(USER_JSON_PATH)["user"]["troop"]["chars"]
     assist_units = []
     for assist_unit_config in assist_unit_configs:
