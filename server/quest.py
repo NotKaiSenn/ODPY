@@ -175,27 +175,30 @@ def questSquadFormation():
 def questGetAssistList():
 
     data = request.data
-    assist_unit_config = read_json(CONFIG_PATH)["charConfig"]["assistUnit"]
+    assist_unit_configs = read_json(CONFIG_PATH)["charConfig"]["assistUnits"]
     saved_data = read_json(USER_JSON_PATH)["user"]["troop"]["chars"]
-    assist_unit = {}
+    assist_units = []
+    for assist_unit_config in assist_unit_configs:
+        assist_unit = {}
 
-    for _, char in saved_data.items():
-        if char["charId"] == assist_unit_config["charId"]:
-            assist_unit.update({
-                "charId": char["charId"],
-                "skinId": assist_unit_config["skinId"],
-                "skills": char["skills"],
-                "mainSkillLvl": char["mainSkillLvl"],
-                "skillIndex": assist_unit_config["skillIndex"],
-                "evolvePhase": char["evolvePhase"],
-                "favorPoint": char["favorPoint"],
-                "potentialRank": char["potentialRank"],
-                "level": char["level"],
-                "crisisRecord": {},
-                "currentEquip": char["currentEquip"],
-                "equip": char["equip"]
-            })
-            break
+        for _, char in saved_data.items():
+            if char["charId"] == assist_unit_config["charId"]:
+                assist_unit.update({
+                    "charId": char["charId"],
+                    "skinId": char["skin"],
+                    "skills": char["skills"],
+                    "mainSkillLvl": char["mainSkillLvl"],
+                    "skillIndex": assist_unit_config["skillIndex"],
+                    "evolvePhase": char["evolvePhase"],
+                    "favorPoint": char["favorPoint"],
+                    "potentialRank": char["potentialRank"],
+                    "level": char["level"],
+                    "crisisRecord": {},
+                    "currentEquip": assist_unit_config["currentEquip"],
+                    "equip": char["equip"]
+                })
+                break
+        assist_units.append(assist_unit)
 
     data = {
         "allowAskTs": int(time()),
@@ -219,7 +222,7 @@ def questGetAssistList():
                 "isFriend": True,
                 "canRequestFriend": False,
                 "assistSlotIndex": 0
-            }
+            } for assist_unit in assist_units
         ],
         "playerDataDelta": {
             "modified": {},
