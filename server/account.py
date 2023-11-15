@@ -401,12 +401,13 @@ def accountSyncData():
         })
     player_data["user"]["background"]["bgs"] = bgs
 
-    themes = {}
-    for theme in display_meta_table["homeBackgroundData"]["themeList"]:
-        themes[theme["id"]] = {
-            "unlock": 1695000000
-        }
-    player_data["user"]["homeTheme"]["themes"] = themes
+    if "themeList" in display_meta_table["homeBackgroundData"]:
+        themes = {}
+        for theme in display_meta_table["homeBackgroundData"]["themeList"]:
+            themes[theme["id"]] = {
+                "unlock": 1695000000
+            }
+        player_data["user"]["homeTheme"]["themes"] = themes
 
     # Update charms
     for charm in charm_table["charmList"]:
@@ -564,8 +565,12 @@ def accountSyncData():
 
     enemy_handbook_table = updateData(ENEMY_HANDBOOK_TABLE_URL)
     enemies = {}
-    for i in enemy_handbook_table["enemyData"]:
-        enemies[i] = 1
+    if "enemyData" in enemy_handbook_table:
+        for i in enemy_handbook_table["enemyData"]:
+            enemies[i] = 1
+    else:
+        for i in enemy_handbook_table:
+            enemies[i] = 1
     player_data["user"]["dexNav"]["enemy"]["enemies"] = enemies
 
     for i in activity_table["activity"]:
