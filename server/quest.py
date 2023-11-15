@@ -181,6 +181,7 @@ def questGetAssistList():
     for assist_unit_config in assist_unit_configs:
         assist_unit = {}
 
+        flag = False
         for _, char in saved_data.items():
             if char["charId"] == assist_unit_config["charId"]:
                 assist_unit.update({
@@ -194,11 +195,13 @@ def questGetAssistList():
                     "potentialRank": char["potentialRank"],
                     "level": char["level"],
                     "crisisRecord": {},
-                    "currentEquip": assist_unit_config["currentEquip"],
+                    "currentEquip": assist_unit_config["currentEquip"] if assist_unit_config["currentEquip"] in char["equip"] else None,
                     "equip": char["equip"]
                 })
+                flag = True
                 break
-        assist_units.append(assist_unit)
+        if flag:
+            assist_units.append(assist_unit)
 
     data = {
         "allowAskTs": int(time()),

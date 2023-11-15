@@ -268,7 +268,7 @@ def accountSyncData():
         })
 
         cnt += 1
-    cntInstId = maxInstId+1
+    cntInstId = 10000
 
     dupe_characters = edit_json["duplicateUnits"]
     for dupeChar in dupe_characters:
@@ -505,13 +505,17 @@ def accountSyncData():
                 break
             charId = slot["charId"]
             del slot["charId"]
-            instId = 1
             if charId in charId2instId:
                 instId = charId2instId[charId]
-            slot["charInstId"] = instId
+                slot["charInstId"] = instId
+                if slot["currentEquip"] not in player_data["user"]["troop"]["chars"][instId]["equip"]:
+                    slot["currentEquip"] = None
+            else:
+                squads_data[i]["slots"][j] = None
             j += 1
         for k in range(j, 12):
             squads_data[i]["slots"].append(None)
+        squads_data[i]["slots"] = squads_data[i]["slots"][:12]
 
     player_data["user"]["troop"]["squads"] = squads_data
 
