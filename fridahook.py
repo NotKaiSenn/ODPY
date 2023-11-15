@@ -37,13 +37,11 @@ def main():
         s = f.read()
 
     s = s.replace(
-        "@@@DOCTORATE@@@HOST@@@", HOST, 1
+        "@@@DOCTORATE_HOST@@@", HOST, 1
     ).replace(
-        "@@@DOCTORATE@@@PORT@@@", str(PORT), 1
+        "@@@DOCTORATE_PORT@@@", str(PORT), 1
     ).replace(
-        "@@@DOCTORATE@@@ACTIVITY@@@", ACTIVITY, 1
-    ).replace(
-        "@@@DOCTORATE@@@ACTIVITY@@@START@@@TS@@@", str(ACTIVITY_START_TS), 1
+        "@@@DOCTORATE_ACTIVITY_START_TS@@@", str(ACTIVITY_START_TS), 1
     )
 
     script = session.create_script(s)
