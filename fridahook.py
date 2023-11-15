@@ -12,7 +12,6 @@ server = config["server"]
 HOST = server["host"]
 PORT = server["port"]
 MODE = server["mode"]
-ACTIVITY = config["userConfig"]["activity"]
 ACTIVITY_START_TS = config["userConfig"]["activityStartTs"]
 
 def on_message(message, data):
