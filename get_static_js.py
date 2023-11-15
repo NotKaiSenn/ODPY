@@ -19,7 +19,7 @@ s = s.replace(
 ).replace(
     "@@@DOCTORATE@@@ACTIVITY@@@", ACTIVITY, 1
 ).replace(
-    "@@@DOCTORATE@@@ACTIVITY@@@START@@@TS@@@", ACTIVITY_START_TS, 1
+    "@@@DOCTORATE@@@ACTIVITY@@@START@@@TS@@@", str(ACTIVITY_START_TS), 1
 )
 
 with open("_.static.js", "w", encoding="utf-8") as f:

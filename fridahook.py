@@ -43,7 +43,7 @@ def main():
     ).replace(
         "@@@DOCTORATE@@@ACTIVITY@@@", ACTIVITY, 1
     ).replace(
-        "@@@DOCTORATE@@@ACTIVITY@@@START@@@TS@@@", ACTIVITY_START_TS, 1
+        "@@@DOCTORATE@@@ACTIVITY@@@START@@@TS@@@", str(ACTIVITY_START_TS), 1
     )
 
     script = session.create_script(s)

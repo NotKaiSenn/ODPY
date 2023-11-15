@@ -93,7 +93,7 @@
             "squadsAndFavs": false
         },
         "activity": "act29side",
-        "activityStartTs": "1698811200",
+        "activityStartTs": 1698811200,
         "secretary": "char_245_cello",
         "secretarySkinId": "char_245_cello#2",
         "background": "bg_kalts_1",
