@@ -114,6 +114,11 @@ app.add_url_rule('/act25side/battleFinish', methods=['POST'], view_func=quest.qu
 
 app.add_url_rule('/car/confirmBattleCar', methods=['POST'], view_func=quest.confirmBattleCar)
 
+app.add_url_rule('/activity/act24side/battleStart', methods=['POST'], view_func=quest.questBattleStart)
+app.add_url_rule('/activity/act24side/battleFinish', methods=['POST'], view_func=quest.questBattleFinish)
+
+app.add_url_rule('/activity/act24side/setTool', methods=['POST'], view_func=quest.setTool)
+
 app.add_url_rule('/retro/typeAct20side/competitionStart', methods=['POST'], view_func=quest.typeAct20side_competitionStart)
 app.add_url_rule('/retro/typeAct20side/competitionFinish', methods=['POST'], view_func=quest.typeAct20side_competitionFinish)
 

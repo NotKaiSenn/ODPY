@@ -55,7 +55,18 @@
                 }
             }
         },
-        "activity": {},
+        "activity": {
+            "TYPE_ACT24SIDE": {
+                "act24side": {
+                    "tool": {
+                        "tool_trap": 1,
+                        "tool_wirebug": 1,
+                        "tool_flashbomb": 1,
+                        "tool_bomb": 1
+                    }
+                }
+            }
+        },
         "status": {
             "nickName": "Doctorate",
             "nickNumber": "1111",

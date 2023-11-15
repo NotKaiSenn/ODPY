@@ -260,3 +260,29 @@ def typeAct20side_competitionFinish():
 
 def questBattleContinue():
     return {"result": 0, "battleId": "abcdefgh-1234-5678-a1b2c3d4e5f6", "playerDataDelta": {"modified": {}, "deleted": {}}}
+
+def setTool():
+    request_data = request.get_json()
+    tool = {
+        "tool_trap": 1,
+        "tool_wirebug": 1,
+        "tool_flashbomb": 1,
+        "tool_bomb": 1
+    }
+    for i in request_data["tools"]:
+        tool[i] = 2
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "activity": {
+                    "TYPE_ACT24SIDE": {
+                        "act24side": {
+                            "tool": tool
+                        }
+                    }
+                }
+            },
+            "deleted": {}
+        }
+    }
+    return data
