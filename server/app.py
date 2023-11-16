@@ -157,6 +157,10 @@ app.add_url_rule('/user/info/v1/need_cloud_auth', methods=['POST'], view_func=us
 app.add_url_rule('/user/yostar_createlogin', methods=['POST'], view_func=user.userYostarCreatelogin)
 app.add_url_rule('/u8/user/v1/getToken', methods=['POST'], view_func=user.userV1getToken)
 
+app.add_url_rule('/user/changeResume', methods=['POST'], view_func=user.user_changeResume)
+app.add_url_rule('/social/getSortListInfo', methods=['POST'], view_func=user.social_getSortListInfo)
+app.add_url_rule('/social/searchPlayer', methods=['POST'], view_func=user.social_searchPlayer)
+
 app.add_url_rule(
     '/user/auth/v1/token_by_phone_password',
     methods=['POST'], view_func=user.auth_v1_token_by_phone_password

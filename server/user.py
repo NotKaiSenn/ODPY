@@ -288,3 +288,66 @@ def general_v1_server_time():
             "isHoliday": False
         }
     }
+
+def user_changeResume():
+    return {
+        "playerDataDelta": {
+            "modified": {
+                "status": {
+                    "resume": request.get_json()["resume"]
+                }
+            },
+            "deleted": {}
+        }
+    }
+
+def social_getSortListInfo():
+    if request.get_json()["type"]:
+        return {"result": [], "playerDataDelta": {"modified": {}, "deleted": {}}}
+    return {
+        "result": [
+            {
+                "level": 120,
+                "uid": "66666666"
+            }
+        ],
+        "playerDataDelta": {
+            "modified": {},
+            "deleted": {}
+        }
+    }
+
+
+def social_searchPlayer():
+    return {
+        "players": [
+            {
+                "nickName": "ABC",
+                "nickNumber": "6666",
+                "uid": "66666666",
+                "friendNumLimit": 50,
+                "serverName": "泰拉",
+                "level": 120,
+                "avatarId": "0",
+                "assistCharList": [
+                    None
+                ],
+                "lastOnlineTime": 0,
+                "medalBoard": {
+                    "type": "EMPTY",
+                    "custom": None,
+                    "template": None
+                }
+            }
+        ],
+        "friendStatusList": [
+            0
+        ],
+        "resultIdList": [
+            "66666666"
+        ],
+        "playerDataDelta": {
+            "modified": {},
+            "deleted": {}
+        }
+    }
