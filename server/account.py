@@ -9,7 +9,7 @@ from flask import request
 from constants import USER_JSON_PATH, CONFIG_PATH, BATTLE_REPLAY_JSON_PATH, \
                     SKIN_TABLE_URL, CHARACTER_TABLE_URL, EQUIP_TABLE_URL, STORY_TABLE_URL, STAGE_TABLE_URL, \
                     SYNC_DATA_TEMPLATE_PATH, BATTLEEQUIP_TABLE_URL, DM_TABLE_URL, RETRO_TABLE_URL, \
-                    HANDBOOK_INFO_TABLE_URL, MAILLIST_PATH, CHARM_TABLE_URL, ACTIVITY_TABLE_URL, SQUADS_PATH, STORY_REVIEW_TABLE_URL, ENEMY_HANDBOOK_TABLE_URL
+                    HANDBOOK_INFO_TABLE_URL, MAILLIST_PATH, CHARM_TABLE_URL, ACTIVITY_TABLE_URL, SQUADS_PATH, STORY_REVIEW_TABLE_URL, ENEMY_HANDBOOK_TABLE_URL, MEDAL_TABLE_URL
 from utils import read_json, write_json
 from core.function.update import updateData
 import uuid
@@ -583,6 +583,17 @@ def accountSyncData():
         for j in activity_table["activity"][i]:
             if j not in player_data["user"]["activity"][i]:
                 player_data["user"]["activity"][i][j] = {}
+
+    player_data["user"]["medal"] = {"medals": {}}
+    medal_table = updateData(MEDAL_TABLE_URL)
+    for i in medal_table["medalList"]:
+        medalId = i["medalId"]
+        player_data["user"]["medal"]["medals"][medalId] = {
+            "id": medalId,
+            "val": [],
+            "fts": 1695000000,
+            "rts": 1695000000
+        }
 
     write_json(player_data, USER_JSON_PATH)
 

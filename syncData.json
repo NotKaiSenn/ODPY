@@ -254,7 +254,12 @@
             "selected": "bg_rhodes_day",
             "bgs": {}
         },
-        "medal": {},
+        "medal": {
+            "custom": {
+                "currentIndex": null,
+                "customs": {}
+            }
+        },
         "homeTheme": {
             "selected": "tm_rhodes_day",
             "themes": {}
