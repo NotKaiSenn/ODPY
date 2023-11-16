@@ -41,6 +41,8 @@ app.add_url_rule('/building/getRecentVisitors', methods=['POST'], view_func=buil
 app.add_url_rule('/building/getInfoShareVisitorsNum', methods=['POST'], view_func=building.building_getInfoShareVisitorsNum)
 app.add_url_rule('/building/changeDiySolution', methods=['POST'], view_func=building.building_changeDiySolution)
 app.add_url_rule('/building/assignChar', methods=['POST'], view_func=building.building_assignChar)
+app.add_url_rule('/building/setBuildingAssist', methods=['POST'], view_func=building.building_setBuildingAssist)
+app.add_url_rule('/building/getAssistReport', methods=['POST'], view_func=building.building_getAssistReport)
 
 app.add_url_rule('/campaignV2/battleStart', methods=['POST'], view_func=campaignV2.campaignV2BattleStart)
 app.add_url_rule('/campaignV2/battleFinish', methods=['POST'], view_func=campaignV2.campaignV2BattleFinish)

@@ -117,3 +117,31 @@ def building_assignChar():
         }
     }
     return data
+
+
+def building_setBuildingAssist():
+    request_data = request.get_json()
+
+    building_data = read_json(BUILDING_JSON_PATH)
+    building_data["assist"][request_data["type"]] = request_data["charInstId"]
+    write_json(building_data, BUILDING_JSON_PATH)
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "building": building_data
+            },
+            "deleted": {}
+        }
+    }
+    return data
+
+
+def building_getAssistReport():
+    return {
+        "reports": [
+        ],
+        "playerDataDelta": {
+            "modified": {},
+            "deleted": {}
+        }
+    }
