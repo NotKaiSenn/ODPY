@@ -161,6 +161,8 @@ app.add_url_rule('/user/changeResume', methods=['POST'], view_func=user.user_cha
 app.add_url_rule('/social/getSortListInfo', methods=['POST'], view_func=user.social_getSortListInfo)
 app.add_url_rule('/social/searchPlayer', methods=['POST'], view_func=user.social_searchPlayer)
 app.add_url_rule('/social/setAssistCharList', methods=['POST'], view_func=user.social_setAssistCharList)
+app.add_url_rule('/social/setCardShowMedal', methods=['POST'], view_func=user.social_setCardShowMedal)
+app.add_url_rule('/medal/setCustomData', methods=['POST'], view_func=user.medal_setCustomData)
 
 app.add_url_rule(
     '/user/auth/v1/token_by_phone_password',

@@ -354,3 +354,11 @@ def social_searchPlayer():
 
 def social_setAssistCharList():
     return {"playerDataDelta": {"modified": {"social": request.get_json()}, "deleted": {}}}
+
+def social_setCardShowMedal():
+    request_data = request.get_json()
+    return {"playerDataDelta": {"modified": {"social": {"medalBoard": {"type": request_data["type"], "template": request_data["templateGroup"]}}}, "deleted": {}}}
+
+def medal_setCustomData():
+    request_data = request.get_json()
+    return {"playerDataDelta": {"modified": {"medal": {"custom": {"customs": {"1": request_data["data"]}}}}, "deleted": {}}}

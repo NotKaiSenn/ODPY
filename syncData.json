@@ -256,8 +256,10 @@
         },
         "medal": {
             "custom": {
-                "currentIndex": null,
-                "customs": {}
+                "currentIndex": "1",
+                "customs": {
+                    "1": {}
+                }
             }
         },
         "homeTheme": {
