@@ -3,11 +3,12 @@ import json
 import requests
 from flask import request
 
-from constants import USER_JSON_PATH
+from constants import USER_JSON_PATH, RLV2_JSON_PATH
 from utils import read_json, write_json
 
 from faketime import time
 
+from datetime import datetime
 
 def userCheckIn():
 
@@ -304,25 +305,74 @@ def user_changeResume():
 def social_getSortListInfo():
     if request.get_json()["type"]:
         return {"result": [], "playerDataDelta": {"modified": {}, "deleted": {}}}
+    request_data = request.get_json()
+    command = request_data["param"]["nickName"]
+    message = datetime.fromtimestamp(
+        time()
+    ).isoformat(timespec="seconds") + " - "
+    playerDataDelta = {
+        "modified": {},
+        "deleted": {}
+    }
+    flag = False
+
+    command_parts = command.split()
+    if len(command_parts) > 0:
+        if command_parts[0] == "rlv2":
+            if len(command_parts) > 1:
+                if command_parts[1] == "hp":
+                    if len(command_parts) > 2:
+                        hp = -1
+                        try:
+                            hp = int(command_parts[2])
+                        except Exception:
+                            pass
+                        if hp != -1:
+                            flag = True
+                            rlv2 = read_json(RLV2_JSON_PATH)
+                            rlv2["player"]["property"]["hp"]["current"] = hp
+                            write_json(rlv2, RLV2_JSON_PATH)
+                            playerDataDelta["modified"]["rlv2"] = {
+                                "current": rlv2
+                            }
+                if command_parts[1] == "gold":
+                    if len(command_parts) > 2:
+                        gold = -1
+                        try:
+                            gold = int(command_parts[2])
+                        except Exception:
+                            pass
+                        if gold != -1:
+                            flag = True
+                            rlv2 = read_json(RLV2_JSON_PATH)
+                            rlv2["player"]["property"]["gold"] = gold
+                            write_json(rlv2, RLV2_JSON_PATH)
+                            playerDataDelta["modified"]["rlv2"] = {
+                                "current": rlv2
+                            }
+
+    if flag:
+        message += command
+    else:
+        message += "unknown command"
     return {
         "result": [
             {
                 "level": 120,
-                "uid": "66666666"
+                "uid": message
             }
         ],
-        "playerDataDelta": {
-            "modified": {},
-            "deleted": {}
-        }
+        "playerDataDelta": playerDataDelta
     }
 
 
 def social_searchPlayer():
+    request_data = request.get_json()
+    message = request_data["idList"][0]
     return {
         "players": [
             {
-                "nickName": "ABC",
+                "nickName": message,
                 "nickNumber": "6666",
                 "uid": "66666666",
                 "friendNumLimit": 50,
