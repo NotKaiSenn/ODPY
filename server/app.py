@@ -160,6 +160,7 @@ app.add_url_rule('/u8/user/v1/getToken', methods=['POST'], view_func=user.userV1
 app.add_url_rule('/user/changeResume', methods=['POST'], view_func=user.user_changeResume)
 app.add_url_rule('/social/getSortListInfo', methods=['POST'], view_func=user.social_getSortListInfo)
 app.add_url_rule('/social/searchPlayer', methods=['POST'], view_func=user.social_searchPlayer)
+app.add_url_rule('/social/setAssistCharList', methods=['POST'], view_func=user.social_setAssistCharList)
 
 app.add_url_rule(
     '/user/auth/v1/token_by_phone_password',

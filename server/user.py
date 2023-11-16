@@ -351,3 +351,6 @@ def social_searchPlayer():
             "deleted": {}
         }
     }
+
+def social_setAssistCharList():
+    return {"playerDataDelta": {"modified": {"social": request.get_json()}, "deleted": {}}}
