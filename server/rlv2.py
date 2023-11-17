@@ -211,7 +211,8 @@ def rlv2CreateGame():
             "relic": {},
             "recruit": {},
             "trap": None,
-            "consumable": {}
+            "consumable": {},
+            "exploreTool": {}
         },
         "game": {
             "mode": mode,
@@ -645,6 +646,10 @@ def getBuffs(rlv2, stage_id):
 
     if rlv2["inventory"]["trap"] is not None:
         item_id = rlv2["inventory"]["trap"]["id"]
+        if item_id in rlv2_table["details"][theme]["relics"]:
+            buffs += rlv2_table["details"][theme]["relics"][item_id]["buffs"]
+    for i in rlv2["inventory"]["exploreTool"]:
+        item_id = rlv2["inventory"]["exploreTool"][i]["id"]
         if item_id in rlv2_table["details"][theme]["relics"]:
             buffs += rlv2_table["details"][theme]["relics"][item_id]["buffs"]
     mode_grade = rlv2["game"]["modeGrade"]
@@ -2076,6 +2081,16 @@ def getNextRelicIndex(rlv2):
     return f"r_{i}"
 
 
+def getNextExploreToolIndex(rlv2):
+    d = set()
+    for e in rlv2["inventory"]["exploreTool"]:
+        d.add(int(e[2:]))
+    i = 0
+    while i in d:
+        i += 1
+    return f"e_{i}"
+
+
 def rlv2BuyGoods():
     request_data = request.get_json()
     select = int(request_data["select"][0])
@@ -2097,6 +2112,14 @@ def rlv2BuyGoods():
     elif item_id.find("_active_tool_") != -1:
         rlv2["inventory"]["trap"] = {
             "index": item_id,
+            "id": item_id,
+            "count": 1,
+            "ts": 1695000000
+        }
+    elif item_id.find("_explore_tool_") != -1:
+        explore_tool_id = getNextExploreToolIndex(rlv2)
+        rlv2["inventory"]["exploreTool"][explore_tool_id] = {
+            "index": explore_tool_id,
             "id": item_id,
             "count": 1,
             "ts": 1695000000
