@@ -2002,6 +2002,21 @@ def getGoods(theme):
             }
         )
         i += 1
+    for j in rlv2_table["details"][theme]["difficultyUpgradeRelicGroups"]:
+        for k in rlv2_table["details"][theme]["difficultyUpgradeRelicGroups"][j]["relicData"]:
+            goods.append(
+                {
+                    "index": str(i),
+                    "itemId": k["relicId"],
+                    "count": 1,
+                    "priceId": price_id,
+                    "priceCount": 0,
+                    "origCost": 0,
+                    "displayPriceChg": False,
+                    "_retainDiscount": 1
+                }
+            )
+            i += 1
     for j in rlv2_table["details"][theme]["archiveComp"]["trap"]["trap"]:
         goods.append(
             {

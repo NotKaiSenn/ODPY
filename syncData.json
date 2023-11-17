@@ -5628,6 +5628,10 @@
                             "MONTH_TEAM": {
                                 "state": 1,
                                 "progress": null
+                            },
+                            "CHALLENGE": {
+                                "state": 1,
+                                "progress": null
                             }
                         },
                         "recruitSet": {
@@ -5756,6 +5760,12 @@
                                 }
                             },
                             "MONTH_TEAM": {
+                                "0": {
+                                    "state": 2,
+                                    "progress": null
+                                }
+                            },
+                            "CHALLENGE": {
                                 "0": {
                                     "state": 2,
                                     "progress": null
