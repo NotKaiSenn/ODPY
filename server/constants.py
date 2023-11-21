@@ -13,6 +13,7 @@ BATTLE_REPLAY_JSON_PATH = "data/user/battleReplays.json"
 RLV2_JSON_PATH = "data/user/rlv2.json"
 RLV2_TEMPBUFF_JSON_PATH = "data/user/rlv2TempBuffs.json"
 CRISIS_JSON_BASE_PATH = "data/crisis/"
+CRISIS_V2_JSON_BASE_PATH = "data/crisisV2/"
 RUNE_JSON_PATH = "data/user/rune.json"
 BUILDING_JSON_PATH = "data/user/building.json"
 

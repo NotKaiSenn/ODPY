@@ -238,6 +238,56 @@
             "teamV2": {}
         },
         "crisis": {},
+        "crisisV2": {
+            "current": "crisis_v2_season_1_1",
+            "seasons": {
+                "crisis_v2_season_1_1": {
+                    "permanent": {
+                        "state": 1,
+                        "scoreTotal": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "scoreSingle": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "comment": [],
+                        "rune": {},
+                        "exRunes": {},
+                        "runePack": {},
+                        "challenge": {},
+                        "reward": {}
+                    },
+                    "temporary": {
+                        "crisis_v2_01-02": {
+                            "state": 0,
+                            "scoreTotal": [],
+                            "rune": {},
+                            "challenge": {}
+                        }
+                    },
+                    "social": {
+                        "assistCnt": 0,
+                        "maxPnt": -1,
+                        "chars": []
+                    }
+                }
+            },
+            "shop": {
+                "coin": 0,
+                "info": [],
+                "progressInfo": {}
+            }
+        },
         "backflow": {
             "open": true,
             "current": null

@@ -2,7 +2,7 @@ from faketime import time
 
 from flask import request
 
-from constants import CONFIG_PATH, CRISIS_JSON_BASE_PATH, RUNE_JSON_PATH
+from constants import CONFIG_PATH, CRISIS_JSON_BASE_PATH, RUNE_JSON_PATH, CRISIS_V2_JSON_BASE_PATH
 from utils import read_json, write_json
 
 
@@ -110,3 +110,50 @@ def crisisBattleFinish():
 
     return data
 
+def crisisV2_getInfo():
+    selected_crisis = read_json(CONFIG_PATH)[
+        "crisisV2Config"
+    ]["selectedCrisis"]
+    if selected_crisis:
+        rune = read_json(
+            f"{CRISIS_V2_JSON_BASE_PATH}{selected_crisis}.json", encoding="utf-8"
+        )
+    else:
+        rune = {
+            "info": {},
+            "ts": 1700000000,
+            "playerDataDelta": {
+                "modified": {},
+                "deleted": {}
+            }
+        }
+    return rune
+
+
+def crisisV2_battleStart():
+    request_data = request.get_json()
+    battle_data = {
+        "mapId": request_data["mapId"],
+        "runeSlots": request_data["runeSlots"]
+    }
+    write_json(battle_data, RUNE_JSON_PATH)
+    return {"result": 0, "battleId": "abcdefgh-1234-5678-a1b2c3d4e5f6", "playerDataDelta": {"modified": {}, "deleted": {}}}
+
+
+def crisisV2_battleFinish():
+    battle_data = read_json(RUNE_JSON_PATH)
+    mapId = battle_data["mapId"]
+    runeSlots = battle_data["runeSlots"]
+    scoreCurrent = [0, 0, 0, 0, 0, 0]
+    selected_crisis = read_json(CONFIG_PATH)[
+        "crisisV2Config"
+    ]["selectedCrisis"]
+    rune = read_json(
+        f"{CRISIS_V2_JSON_BASE_PATH}{selected_crisis}.json", encoding="utf-8"
+    )
+
+    for slot in runeSlots:
+        runeId = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]["runeId"]
+        runeData = rune["info"]["mapDetailDataMap"][mapId]["runeDataMap"][runeId]
+        scoreCurrent[runeData["dimension"]] += runeData["score"]
+    return {"result": 0, "mapId": mapId, "runeSlots": runeSlots, "isNewRecord": False, "scoreRecord": [0, 0, 0, 0, 0, 0], "scoreCurrent": scoreCurrent, "runeCount": [0, 0], "commentNew": [], "commentOld": [], "ts": 1700000000, "playerDataDelta": {"modified": {}, "deleted": {}}}

@@ -81,6 +81,9 @@
     "crisisConfig": {
         "selectedCrisis": "cc12"
     },
+    "crisisV2Config": {
+        "selectedCrisis": "cc1"
+    },
     "towerConfig": {
         "season": "tower_season_3"
     },
