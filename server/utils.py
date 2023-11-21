@@ -83,7 +83,7 @@ def write_json(data: dict, filepath: str) -> None:
             json.dump(data, f, sort_keys=False, indent=4)
 
 
-def decrypt_battle_data(data: str, login_time: int) -> dict:
+def decrypt_battle_data(data: str, login_time: int = 1672502400) -> dict:
     
     LOG_TOKEN_KEY = "pM6Umv*^hVQuB6t&"
     

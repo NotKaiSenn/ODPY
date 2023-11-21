@@ -1872,7 +1872,7 @@ def rlv2MoveAndBattleStart():
 
 def rlv2BattleFinish():
     request_data = request.get_json()
-    battle_data = decrypt_battle_data(request_data["data"], 1672502400)
+    battle_data = decrypt_battle_data(request_data["data"])
 
     rlv2 = read_json(RLV2_JSON_PATH)
     if battle_data["completeState"] != 1:

@@ -238,7 +238,7 @@ def towerBattleFinish():
     data = request.data
     request_data = request.get_json()
     tower = read_json(TOWERDATA_PATH)
-    BattleData = decrypt_battle_data(request_data["data"], 1672502400)
+    BattleData = decrypt_battle_data(request_data["data"])
     trap = []
     writeLog("\033[1;31m" + str(BattleData) + "\033[0;0m")
 
