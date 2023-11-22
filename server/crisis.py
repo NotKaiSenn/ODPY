@@ -153,7 +153,9 @@ def crisisV2_battleFinish():
     )
 
     for slot in runeSlots:
-        runeId = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]["runeId"]
-        runeData = rune["info"]["mapDetailDataMap"][mapId]["runeDataMap"][runeId]
-        scoreCurrent[runeData["dimension"]] += runeData["score"]
+        nodeData = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]
+        if "runeId" in nodeData:
+            runeId = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]["runeId"]
+            runeData = rune["info"]["mapDetailDataMap"][mapId]["runeDataMap"][runeId]
+            scoreCurrent[runeData["dimension"]] += runeData["score"]
     return {"result": 0, "mapId": mapId, "runeSlots": runeSlots, "isNewRecord": False, "scoreRecord": [0, 0, 0, 0, 0, 0], "scoreCurrent": scoreCurrent, "runeCount": [0, 0], "commentNew": [], "commentOld": [], "ts": 1700000000, "playerDataDelta": {"modified": {}, "deleted": {}}}
