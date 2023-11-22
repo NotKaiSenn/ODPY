@@ -152,6 +152,56 @@ def crisisV2_battleFinish():
         f"{CRISIS_V2_JSON_BASE_PATH}{selected_crisis}.json", encoding="utf-8"
     )
 
+    nodes = {}
+    for slot in rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"]:
+        if not slot.startswith("node_"):
+            continue
+        nodeData = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]
+        slotPackId = nodeData["slotPackId"]
+        if not slotPackId:
+            continue
+        if slotPackId not in nodes:
+            nodes[slotPackId] = {}
+        if nodeData["mutualExclusionGroup"]:
+            mutualExclusionGroup = nodeData["mutualExclusionGroup"]
+        else:
+            mutualExclusionGroup = slot
+        if mutualExclusionGroup not in nodes[slotPackId]:
+            nodes[slotPackId][mutualExclusionGroup] = {}
+        if "runeId" in nodeData:
+            runeId = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]["runeId"]
+            if runeId:
+                runeData = rune["info"]["mapDetailDataMap"][mapId]["runeDataMap"][runeId]
+                score = runeData["score"]
+            else:
+                score = 0
+        else:
+            score = 0
+        nodes[slotPackId][mutualExclusionGroup][slot] = score
+
+    slots = set(runeSlots)
+    for slotPackId in nodes:
+        flag = True
+        for mutualExclusionGroup in nodes[slotPackId]:
+            score_max = 0
+            for slot in nodes[slotPackId][mutualExclusionGroup]:
+                score_max = max(
+                    score_max,  nodes[slotPackId][mutualExclusionGroup][slot]
+                )
+            flag2 = False
+            for slot in nodes[slotPackId][mutualExclusionGroup]:
+                if nodes[slotPackId][mutualExclusionGroup][slot] != score_max:
+                    continue
+                if slot in slots:
+                    flag2 = True
+                    break
+            if not flag2:
+                flag = False
+                break
+        if flag:
+            bagData = rune["info"]["mapDetailDataMap"][mapId]["bagDataMap"][slotPackId]
+            scoreCurrent[bagData["dimension"]] += bagData["rewardScore"]
+
     for slot in runeSlots:
         nodeData = rune["info"]["mapDetailDataMap"][mapId]["nodeDataMap"][slot]
         if "runeId" in nodeData:
