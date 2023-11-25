@@ -287,6 +287,19 @@
                             ],
                             "rune": {},
                             "challenge": {}
+                        },
+                        "crisis_v2_01-03": {
+                            "state": 1,
+                            "scoreTotal": [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "rune": {},
+                            "challenge": {}
                         }
                     },
                     "social": {
