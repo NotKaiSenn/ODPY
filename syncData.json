@@ -300,6 +300,32 @@
                             ],
                             "rune": {},
                             "challenge": {}
+                        },
+                        "crisis_v2_01-05": {
+                            "state": 1,
+                            "scoreTotal": [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "rune": {},
+                            "challenge": {}
+                        },
+                        "crisis_v2_01-07": {
+                            "state": 1,
+                            "scoreTotal": [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "rune": {},
+                            "challenge": {}
                         }
                     },
                     "social": {
