@@ -5,6 +5,7 @@ from random import shuffle
 from constants import CONFIG_PATH
 from utils import read_json, write_json
 from core.function.update import updateData
+from flask import request
 
 
 def randomHash():
@@ -41,6 +42,8 @@ def prodNetworkConfig():
 
     mode = server_config["server"]["mode"]
     server = "http://" + server_config["server"]["host"] + ":" + str(server_config["server"]["port"])
+    if server_config["server"]["adaptive"]:
+        server = request.host_url[:-1]
     network_config = server_config["networkConfig"][mode]
     funcVer = network_config["content"]["funcVer"]
 

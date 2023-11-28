@@ -4,7 +4,8 @@
         "port": 8443,
         "enableServer": true,
         "maintenanceMsg": "Server is currently under maintenance!",
-        "mode": "cn"
+        "mode": "cn",
+        "adaptive": true
     },
     "assets": {
         "autoUpdate": false,
