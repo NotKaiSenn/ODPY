@@ -529,14 +529,28 @@ def getMap(theme):
                     "x": 0,
                     "y": 0
                 },
+                "next": [
+                    {
+                        "x": 1,
+                        "y": 0
+                    }
+                ],
+                "type": shop
+            },
+            {
+                "index": "100",
+                "pos": {
+                    "x": 1,
+                    "y": 0
+                },
                 "next": [],
                 "type": shop
             }
         ]
         x_max = 9
         y_max = 3
-        x = 0
-        y = y_max+1
+        x = 1
+        y = 1
         while j < len(stages):
             stage = stages[j]
             if y > y_max:
@@ -2159,9 +2173,13 @@ def rlv2LeaveShop():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["state"] = "WAIT_MOVE"
     rlv2["player"]["pending"] = []
-    if rlv2["player"]["cursor"]["position"]["x"] > 0:
+    if rlv2["player"]["cursor"]["position"]["x"] > 1:
         rlv2["player"]["cursor"]["zone"] += 1
         rlv2["player"]["cursor"]["position"] = None
+    elif rlv2["player"]["cursor"]["position"]["x"] == 1:
+        rlv2["player"]["cursor"]["position"]["x"] = 0
+        rlv2["player"]["cursor"]["position"]["y"] = 0
+        rlv2["player"]["trace"].pop()
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
