@@ -1,7 +1,11 @@
 import requests
 
+timeout = 30
+
 try:
-    r = requests.head("https://ak.hypergryph.com/downloads/android_lastest")
+    r = requests.head(
+        "https://ak.hypergryph.com/downloads/android_lastest", timeout=timeout
+    )
     location = r.headers.get("location")
 
     if location.endswith(".apk"):

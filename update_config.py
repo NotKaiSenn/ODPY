@@ -9,9 +9,11 @@ old_clientVersion = config["version"]["android"]["clientVersion"]
 
 old_funcVer = config["networkConfig"]["cn"]["content"]["funcVer"]
 
+timeout = 30
+
 try:
     version = requests.get(
-        "https://ak-conf.hypergryph.com/config/prod/official/Android/version"
+        "https://ak-conf.hypergryph.com/config/prod/official/Android/version", timeout=timeout
     ).json()
     resVersion = version["resVersion"]
     clientVersion = version["clientVersion"]
@@ -25,7 +27,7 @@ except Exception:
 
 try:
     network_config = requests.get(
-        "https://ak-conf.hypergryph.com/config/prod/official/network_config"
+        "https://ak-conf.hypergryph.com/config/prod/official/network_config", timeout=timeout
     ).json()
     content = json.loads(network_config["content"])
     funcVer = content["funcVer"]

@@ -13,7 +13,7 @@ jobs:
       - run: pyinstaller odpy.spec
       - run: move config/, data/, mods/, _.js, game.txt, README.md, syncData.json dist/odpy/
       - run: python update_cache.py
-      - run: move adb.zip, frida-server-*.xz, foobar dist/odpy/ -ErrorAction SilentlyContinue
+      - run: move adb.zip, frida-server-*.xz dist/odpy/ -ErrorAction SilentlyContinue
       - uses: actions/upload-artifact@v3
         with:
           name: windows
