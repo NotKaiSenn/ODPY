@@ -53,6 +53,34 @@
                     "fts": 1665223849,
                     "rts": 1665223886
                 }
+            },
+            "hideStages": {
+                "act19side_s01": {
+                    "missions": [
+                        {
+                            "value": 1,
+                            "target": 1
+                        },
+                        {
+                            "value": 1,
+                            "target": 1
+                        }
+                    ],
+                    "unlock": 1
+                },
+                "act19side_s02": {
+                    "missions": [
+                        {
+                            "value": 1,
+                            "target": 1
+                        },
+                        {
+                            "value": 1,
+                            "target": 1
+                        }
+                    ],
+                    "unlock": 1
+                }
             }
         },
         "activity": {
