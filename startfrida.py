@@ -6,7 +6,7 @@ import json
 
 from ppadb.client import Client as AdbClient
 
-server_port = json.load(open('./config/config.json', 'r'))["server"]["port"]
+server_port = json.load(open('config/config.json', 'r'))["server"]["port"]
 default_ports = [7555, 5555, 62001]
 ADB_PATH = "platform-tools\\adb.exe"
 

@@ -2,12 +2,11 @@ import sys
 from base64 import b64decode
 
 import frida
+import json
 
-sys.path.append("server")
-from server.constants import CONFIG_PATH
-from server.utils import read_json
+with open("config/config.json") as f:
+    config = json.load(f)
 
-config = read_json(CONFIG_PATH)
 server = config["server"]
 HOST = server["host"]
 PORT = server["port"]
