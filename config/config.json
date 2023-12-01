@@ -97,9 +97,9 @@
             "squadsAndFavs": false
         },
         "activityStartTs": 1698206400,
-        "secretary": "char_245_cello",
-        "secretarySkinId": "char_245_cello#2",
-        "background": "bg_kalts_1",
+        "secretary": "char_2014_nian",
+        "secretarySkinId": "char_2014_nian@nian#4",
+        "background": "bg_kazimierz_1",
         "theme": "tm_mainline_1",
         "fakeTime": -1
     },
@@ -238,6 +238,11 @@
             "charId": "char_2014_nian",
             "skillIndex": 1,
             "currentEquip": "uniequip_002_nian"
+        },
+        {
+            "charId": "char_136_hsguma",
+            "skillIndex": 1,
+            "currentEquip": "uniequip_003_hsguma"
         },
         {
             "charId": "char_340_shwaz",
