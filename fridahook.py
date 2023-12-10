@@ -11,6 +11,7 @@ server = config["server"]
 HOST = server["host"]
 PORT = server["port"]
 MODE = server["mode"]
+NO_PROXY = server["noProxy"]
 ACTIVITY_START_TS = config["userConfig"]["activityStartTs"]
 
 def on_message(message, data):
@@ -35,7 +36,7 @@ def main():
         s = f.read()
 
     s = s.replace(
-        "@@@DOCTORATE_HOST@@@", HOST, 1
+        "@@@DOCTORATE_HOST@@@", "NO_PROXY" if NO_PROXY else HOST, 1
     ).replace(
         "@@@DOCTORATE_PORT@@@", str(PORT), 1
     ).replace(
