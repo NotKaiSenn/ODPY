@@ -6617,6 +6617,32 @@
                         ],
                         "unlockHard": true,
                         "hardBest": 0
+                    },
+                    "tower_n_11": {
+                        "best": 6,
+                        "reward": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "unlockHard": true,
+                        "hardBest": 0
+                    },
+                    "tower_n_12": {
+                        "best": 6,
+                        "reward": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "unlockHard": true,
+                        "hardBest": 0
                     }
                 },
                 "hasTowerPass": 1,
@@ -6753,6 +6779,46 @@
                         "hasRecv": true
                     },
                     "tower_season3_8": {
+                        "value": 15,
+                        "target": 15,
+                        "hasRecv": true
+                    },
+                    "tower_season4_1": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season4_2": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season4_3": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season4_4": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season4_5": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season4_6": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season4_7": {
+                        "value": 15,
+                        "target": 15,
+                        "hasRecv": true
+                    },
+                    "tower_season4_8": {
                         "value": 15,
                         "target": 15,
                         "hasRecv": true
