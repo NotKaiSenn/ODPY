@@ -19,16 +19,20 @@ def getChars():
     for i in range(len(chars)):
         char = chars[i]
         if char["evolvePhase"] == 2:
+            if char["charId"] == "char_002_amiya":
+                char_alt = deepcopy(char)
+                char_alt["currentTmpl"] = "char_1001_amiya2"
+                chars.append(char_alt)
+                continue
             char_alt = deepcopy(char)
             char_alt["evolvePhase"] = 1
             char_alt["level"] -= 10
             if len(char["skills"]) == 3:
                 char_alt["defaultSkillIndex"] = 1
-                char_alt["skills"].pop()
+                char_alt["skills"][-1]["unlock"] = 0
             for skill in char_alt["skills"]:
                 skill["specializeLevel"] = 0
             char_alt["currentEquip"] = None
-            char_alt["equip"] = {}
             chars.append(char_alt)
     for i, char in enumerate(chars):
         char.update(
