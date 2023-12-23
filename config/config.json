@@ -95,7 +95,8 @@
     "userConfig": {
         "restorePreviousStates": {
             "is2": false,
-            "squadsAndFavs": false
+            "squadsAndFavs": false,
+            "ui": false
         },
         "activityStartTs": 1702627200,
         "secretary": "char_2014_nian",
