@@ -42,10 +42,16 @@ def userChangeSecretary():
         }
     }
 
-    if charInstId and skinId:
-        data["playerDataDelta"]["modified"]["status"]["secretary"] = skinId.split("@")[0] if "@" in skinId else skinId.split("#")[0]
-        data["playerDataDelta"]["modified"]["status"]["secretarySkinId"] = skinId
-        return data
+    secretary = skinId.split("@")[0] if "@" in skinId else skinId.split("#")[0]
+    data["playerDataDelta"]["modified"]["status"]["secretary"] = secretary
+    data["playerDataDelta"]["modified"]["status"]["secretarySkinId"] = skinId
+
+    saved_data = read_json(USER_JSON_PATH)
+    saved_data["user"]["status"]["secretary"] = secretary
+    saved_data["user"]["status"]["secretarySkinId"] = skinId
+    write_json(saved_data, USER_JSON_PATH)
+
+    return data
 
 
 def userLogin():

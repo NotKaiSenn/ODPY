@@ -1,4 +1,10 @@
-on: push
+on:
+  schedule:
+    - cron: '53 9 */3 * *'
+  push:
+    branches:
+      - master
+
 
 jobs:
   win:

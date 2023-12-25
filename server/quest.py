@@ -5,6 +5,25 @@ from flask import request
 from constants import BATTLE_REPLAY_JSON_PATH, USER_JSON_PATH, CONFIG_PATH
 from utils import read_json, write_json
 
+from base64 import b64decode, b64encode
+import io
+import zipfile
+import json
+
+
+def decode_battle_replay(encoded_battle_replay):
+    bytes_io = io.BytesIO(b64decode(encoded_battle_replay))
+    with zipfile.ZipFile(bytes_io) as zip_file:
+        decoded_battle_replay = json.loads(zip_file.read("default_entry"))
+    return decoded_battle_replay
+
+
+def encode_battle_replay(decoded_battle_replay):
+    bytes_io = io.BytesIO()
+    with zipfile.ZipFile(bytes_io, "w") as zip_file:
+        zip_file.writestr("default_entry", json.dumps(decoded_battle_replay))
+    encoded_battle_replay = b64encode(bytes_io.getvalue()).decode("utf-8")
+    return encoded_battle_replay
 
 def questBattleStart():
 
@@ -81,14 +100,17 @@ def questSaveBattleReplay():
 
     char_config = replay_data["currentCharConfig"]
 
+    encoded_battle_replay = request_data["battleReplay"]
+    decoded_battle_replay = decode_battle_replay(encoded_battle_replay)
+
     if char_config in list(replay_data["saved"].keys()):
         replay_data["saved"][char_config].update({
-            replay_data["current"]: request_data["battleReplay"]
+            replay_data["current"]: decoded_battle_replay
         })
     else:
         replay_data["saved"].update({
             char_config: {
-                replay_data["current"]: request_data["battleReplay"]
+                replay_data["current"]: decoded_battle_replay
             }
         })
     replay_data["current"] = None
@@ -103,8 +125,12 @@ def questGetBattleReplay():
     stageId = request.get_json()["stageId"]
 
     replay_data = read_json(BATTLE_REPLAY_JSON_PATH)
+
+    decoded_battle_replay = replay_data["saved"][replay_data["currentCharConfig"]][stageId]
+    encoded_battle_replay = encode_battle_replay(decoded_battle_replay)
+
     battleData = {
-        "battleReplay": replay_data["saved"][replay_data["currentCharConfig"]][stageId],
+        "battleReplay": encoded_battle_replay,
         "playerDataDelta": {
             "deleted": {},
             "modified": {}

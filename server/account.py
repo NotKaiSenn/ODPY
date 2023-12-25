@@ -541,6 +541,12 @@ def accountSyncData():
     background = config["userConfig"]["background"]
     theme = config["userConfig"]["theme"]
 
+    if "user" in saved_data and config["userConfig"]["restorePreviousStates"]["ui"]:
+        secretary = saved_data["user"]["status"]["secretary"]
+        secretarySkinId = saved_data["user"]["status"]["secretarySkinId"]
+        background = saved_data["user"]["background"]["selected"]
+        theme = saved_data["user"]["homeTheme"]["selected"]
+
     player_data["user"]["status"]["secretary"] = secretary
     player_data["user"]["status"]["secretarySkinId"] = secretarySkinId
     player_data["user"]["background"]["selected"] = background
