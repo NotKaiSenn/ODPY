@@ -131,7 +131,8 @@
         "relic": {},
         "recruit": {},
         "trap": null,
-        "consumable": {}
+        "consumable": {},
+        "exploreTool": {}
     },
     "game": {
         "mode": "NORMAL",

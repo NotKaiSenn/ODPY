@@ -195,6 +195,11 @@
             "currentEquip": "uniequip_003_demkni"
         },
         {
+            "charId": "char_202_demkni",
+            "skillIndex": 1,
+            "currentEquip": "uniequip_003_demkni"
+        },
+        {
             "charId": "char_4055_bgsnow",
             "skillIndex": 2,
             "currentEquip": "uniequip_002_bgsnow"
