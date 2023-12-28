@@ -92,6 +92,9 @@
     "rlv2Config": {
         "allChars": true
     },
+    "battleReplayConfig": {
+        "anonymous": false
+    },
     "userConfig": {
         "restorePreviousStates": {
             "is2": false,

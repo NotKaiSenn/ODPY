@@ -103,6 +103,11 @@ def questSaveBattleReplay():
     encoded_battle_replay = request_data["battleReplay"]
     decoded_battle_replay = decode_battle_replay(encoded_battle_replay)
 
+    if read_json(CONFIG_PATH)["battleReplayConfig"]["anonymous"]:
+        decoded_battle_replay["campaignOnlyVersion"] = 0
+        decoded_battle_replay["timestamp"] = "1700000000"
+        decoded_battle_replay["journal"]["metadata"]["saveTime"] = "2023-11-15T06:13:20Z"
+
     if char_config in list(replay_data["saved"].keys()):
         replay_data["saved"][char_config].update({
             replay_data["current"]: decoded_battle_replay
