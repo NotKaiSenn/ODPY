@@ -1,388 +1,430 @@
 {
+    "assist": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+    ],
     "roomSlots": {
-        "slot_34": {
-            "level": 5,
-            "state": 2,
-            "roomId": "CONTROL",
-            "charInstIds": [
-                -1,
-                -1,
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_36": {
-            "level": 3,
-            "state": 2,
-            "roomId": "MEETING",
-            "charInstIds": [
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_23": {
-            "level": 3,
-            "state": 2,
-            "roomId": "HIRE",
-            "charInstIds": [
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_16": {
-            "level": 3,
-            "state": 2,
-            "roomId": "TRADING",
-            "charInstIds": [
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_15": {
-            "level": 3,
-            "state": 2,
-            "roomId": "MANUFACTURE",
-            "charInstIds": [
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_14": {
-            "level": 3,
-            "state": 2,
-            "roomId": "MANUFACTURE",
-            "charInstIds": [
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_7": {
-            "level": 3,
-            "state": 2,
-            "roomId": "TRADING",
-            "charInstIds": [
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_6": {
-            "level": 3,
-            "state": 2,
-            "roomId": "MANUFACTURE",
-            "charInstIds": [
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_5": {
-            "level": 3,
-            "state": 2,
-            "roomId": "MANUFACTURE",
-            "charInstIds": [
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_13": {
-            "level": 3,
-            "state": 2,
-            "roomId": "TRAINING",
-            "charInstIds": [
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_28": {
-            "level": 5,
-            "state": 2,
-            "roomId": "DORMITORY",
-            "charInstIds": [
-                -1,
-                -1,
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_20": {
-            "level": 5,
-            "state": 2,
-            "roomId": "DORMITORY",
-            "charInstIds": [
-                -1,
-                -1,
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_9": {
-            "level": 5,
-            "state": 2,
-            "roomId": "DORMITORY",
-            "charInstIds": [
-                -1,
-                -1,
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_3": {
-            "level": 5,
-            "state": 2,
-            "roomId": "DORMITORY",
-            "charInstIds": [
-                -1,
-                -1,
-                -1,
-                -1,
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_26": {
-            "level": 3,
-            "state": 2,
-            "roomId": "POWER",
-            "charInstIds": [
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_25": {
-            "level": 3,
-            "state": 2,
-            "roomId": "POWER",
-            "charInstIds": [
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_24": {
-            "level": 3,
-            "state": 2,
-            "roomId": "POWER",
-            "charInstIds": [
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_32": {
-            "level": 3,
-            "state": 2,
-            "roomId": "WORKSHOP",
-            "charInstIds": [
-                -1
-            ],
-            "completeConstructTime": -1
-        },
-        "slot_37": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_38": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_33": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_27": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_30": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_35": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_18": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_21": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_11": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_8": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_4": {
-            "level": 1,
-            "state": 2,
-            "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
         "slot_1": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
             "level": 1,
-            "state": 2,
             "roomId": "ELEVATOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_29": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_31": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_17": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_19": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
-        },
-        "slot_22": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
-            "charInstIds": [],
-            "completeConstructTime": -1
+            "state": 2
         },
         "slot_10": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
             "charInstIds": [],
-            "completeConstructTime": -1
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_11": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
         },
         "slot_12": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
             "charInstIds": [],
-            "completeConstructTime": -1
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_13": {
+            "charInstIds": [
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "TRAINING",
+            "state": 2
+        },
+        "slot_14": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "MANUFACTURE",
+            "state": 2
+        },
+        "slot_15": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "MANUFACTURE",
+            "state": 2
+        },
+        "slot_16": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "TRADING",
+            "state": 2
+        },
+        "slot_17": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_18": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_19": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
         },
         "slot_2": {
-            "level": 1,
-            "state": 2,
-            "roomId": "CORRIDOR",
             "charInstIds": [],
-            "completeConstructTime": -1
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_20": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 5,
+            "roomId": "DORMITORY",
+            "state": 2
+        },
+        "slot_21": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_22": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_23": {
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "HIRE",
+            "state": 2
+        },
+        "slot_24": {
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "POWER",
+            "state": 2
+        },
+        "slot_25": {
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "POWER",
+            "state": 2
+        },
+        "slot_26": {
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "POWER",
+            "state": 2
+        },
+        "slot_27": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_28": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 5,
+            "roomId": "DORMITORY",
+            "state": 2
+        },
+        "slot_29": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_3": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 5,
+            "roomId": "DORMITORY",
+            "state": 2
+        },
+        "slot_30": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_31": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "CORRIDOR",
+            "state": 2
+        },
+        "slot_32": {
+            "charInstIds": [
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "WORKSHOP",
+            "state": 2
+        },
+        "slot_33": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_34": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 5,
+            "roomId": "CONTROL",
+            "state": 2
+        },
+        "slot_35": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_36": {
+            "charInstIds": [
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "MEETING",
+            "state": 2
+        },
+        "slot_37": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_38": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_4": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_5": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "MANUFACTURE",
+            "state": 2
+        },
+        "slot_6": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "MANUFACTURE",
+            "state": 2
+        },
+        "slot_7": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 3,
+            "roomId": "TRADING",
+            "state": 2
+        },
+        "slot_8": {
+            "charInstIds": [],
+            "completeConstructTime": -1,
+            "level": 1,
+            "roomId": "ELEVATOR",
+            "state": 2
+        },
+        "slot_9": {
+            "charInstIds": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "completeConstructTime": -1,
+            "level": 5,
+            "roomId": "DORMITORY",
+            "state": 2
         }
     },
     "rooms": {
         "CONTROL": {
             "slot_34": {}
         },
-        "MEETING": {
-            "slot_36": {}
+        "CORRIDOR": {
+            "slot_10": {},
+            "slot_12": {},
+            "slot_17": {},
+            "slot_19": {},
+            "slot_2": {},
+            "slot_22": {},
+            "slot_29": {},
+            "slot_31": {}
+        },
+        "DORMITORY": {
+            "slot_20": {},
+            "slot_28": {},
+            "slot_3": {},
+            "slot_9": {}
+        },
+        "ELEVATOR": {
+            "slot_1": {},
+            "slot_11": {},
+            "slot_18": {},
+            "slot_21": {},
+            "slot_27": {},
+            "slot_30": {},
+            "slot_33": {},
+            "slot_35": {},
+            "slot_37": {},
+            "slot_38": {},
+            "slot_4": {},
+            "slot_8": {}
         },
         "HIRE": {
             "slot_23": {}
         },
-        "TRADING": {
-            "slot_16": {
-                "state": 1,
-                "strategy": "O_GOLD",
-                "stockLimit": 10,
-                "stock": []
-            },
-            "slot_7": {
-                "state": 1,
-                "strategy": "O_GOLD",
-                "stockLimit": 10,
-                "stock": []
-            }
-        },
         "MANUFACTURE": {
-            "slot_15": {
-                "state": 1
-            },
             "slot_14": {
                 "state": 1
             },
-            "slot_6": {
+            "slot_15": {
                 "state": 1
             },
             "slot_5": {
                 "state": 1
+            },
+            "slot_6": {
+                "state": 1
+            }
+        },
+        "MEETING": {
+            "slot_36": {}
+        },
+        "POWER": {
+            "slot_24": {},
+            "slot_25": {},
+            "slot_26": {}
+        },
+        "TRADING": {
+            "slot_16": {
+                "state": 1,
+                "stock": [],
+                "stockLimit": 10,
+                "strategy": "O_GOLD"
+            },
+            "slot_7": {
+                "state": 1,
+                "stock": [],
+                "stockLimit": 10,
+                "strategy": "O_GOLD"
             }
         },
         "TRAINING": {
             "slot_13": {
                 "trainee": {
                     "charInstId": -1,
-                    "state": 0,
-                    "targetSkill": -1,
                     "processPoint": -1,
-                    "speed": 1
+                    "speed": 1,
+                    "state": 0,
+                    "targetSkill": -1
                 },
                 "trainer": {
                     "charInstId": -1,
@@ -390,50 +432,8 @@
                 }
             }
         },
-        "DORMITORY": {
-            "slot_28": {},
-            "slot_20": {},
-            "slot_9": {},
-            "slot_3": {}
-        },
-        "POWER": {
-            "slot_26": {},
-            "slot_25": {},
-            "slot_24": {}
-        },
         "WORKSHOP": {
             "slot_32": {}
-        },
-        "ELEVATOR": {
-            "slot_37": {},
-            "slot_38": {},
-            "slot_33": {},
-            "slot_27": {},
-            "slot_30": {},
-            "slot_35": {},
-            "slot_18": {},
-            "slot_21": {},
-            "slot_11": {},
-            "slot_8": {},
-            "slot_4": {},
-            "slot_1": {}
-        },
-        "CORRIDOR": {
-            "slot_29": {},
-            "slot_31": {},
-            "slot_17": {},
-            "slot_19": {},
-            "slot_22": {},
-            "slot_10": {},
-            "slot_12": {},
-            "slot_2": {}
         }
-    },
-    "assist": [
-        -1,
-        -1,
-        -1,
-        -1,
-        -1
-    ]
+    }
 }
