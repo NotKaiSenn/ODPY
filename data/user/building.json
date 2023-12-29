@@ -135,7 +135,7 @@
         },
         "slot_23": {
             "charInstIds": [
-                -1
+                4065
             ],
             "completeConstructTime": -1,
             "level": 3,
@@ -261,7 +261,7 @@
         },
         "slot_36": {
             "charInstIds": [
-                -1,
+                291,
                 -1
             ],
             "completeConstructTime": -1,
@@ -5343,8 +5343,8 @@
             "charId": "char_291_aglina",
             "lastApAddTime": 1695000000,
             "ap": 8640000,
-            "roomSlotId": "",
-            "index": -1,
+            "roomSlotId": "slot_36",
+            "index": 0,
             "changeScale": 0,
             "bubble": {
                 "normal": {
@@ -5913,8 +5913,8 @@
             "charId": "char_4065_judge",
             "lastApAddTime": 1695000000,
             "ap": 8640000,
-            "roomSlotId": "",
-            "index": -1,
+            "roomSlotId": "slot_23",
+            "index": 0,
             "changeScale": 0,
             "bubble": {
                 "normal": {
