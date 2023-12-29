@@ -348,14 +348,32 @@
             "slot_23": {}
         },
         "TRADING": {
-            "slot_16": {},
-            "slot_7": {}
+            "slot_16": {
+                "state": 1,
+                "strategy": "O_GOLD",
+                "stockLimit": 10,
+                "stock": []
+            },
+            "slot_7": {
+                "state": 1,
+                "strategy": "O_GOLD",
+                "stockLimit": 10,
+                "stock": []
+            }
         },
         "MANUFACTURE": {
-            "slot_15": {},
-            "slot_14": {},
-            "slot_6": {},
-            "slot_5": {}
+            "slot_15": {
+                "state": 1
+            },
+            "slot_14": {
+                "state": 1
+            },
+            "slot_6": {
+                "state": 1
+            },
+            "slot_5": {
+                "state": 1
+            }
         },
         "TRAINING": {
             "slot_13": {
