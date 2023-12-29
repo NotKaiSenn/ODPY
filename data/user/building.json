@@ -195,6 +195,146 @@
                 -1
             ],
             "completeConstructTime": -1
+        },
+        "slot_37": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_38": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_33": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_27": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_30": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_35": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_18": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_21": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_11": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_8": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_4": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_1": {
+            "level": 1,
+            "state": 2,
+            "roomId": "ELEVATOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_29": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_31": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_17": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_19": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_22": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_10": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_12": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
+        },
+        "slot_2": {
+            "level": 1,
+            "state": 2,
+            "roomId": "CORRIDOR",
+            "charInstIds": [],
+            "completeConstructTime": -1
         }
     },
     "rooms": {
@@ -245,6 +385,30 @@
         },
         "WORKSHOP": {
             "slot_32": {}
+        },
+        "ELEVATOR": {
+            "slot_37": {},
+            "slot_38": {},
+            "slot_33": {},
+            "slot_27": {},
+            "slot_30": {},
+            "slot_35": {},
+            "slot_18": {},
+            "slot_21": {},
+            "slot_11": {},
+            "slot_8": {},
+            "slot_4": {},
+            "slot_1": {}
+        },
+        "CORRIDOR": {
+            "slot_29": {},
+            "slot_31": {},
+            "slot_17": {},
+            "slot_19": {},
+            "slot_22": {},
+            "slot_10": {},
+            "slot_12": {},
+            "slot_2": {}
         }
     },
     "assist": [
