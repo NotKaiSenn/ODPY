@@ -1,6 +1,9 @@
 /adb.zip
 /frida-server-*.xz
 /_.static.js
+/aria2*.zip
+/aria2c.exe
+/assets.txt
 # User files
 TestLevel/
 
