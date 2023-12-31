@@ -132,6 +132,39 @@ fridahook_exe = EXE(
     entitlements_file=None,
 )
 
+download_assets_a = Analysis(
+    ['download_assets.py'],
+    pathex=[],
+    binaries=[],
+    datas=[],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+)
+
+download_assets_pyz = PYZ(download_assets_a.pure)
+
+download_assets_exe = EXE(
+    download_assets_pyz,
+    download_assets_a.scripts,
+    [],
+    exclude_binaries=True,
+    name='download_assets',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    console=True,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+)
+
 coll = COLLECT(
     app_exe,
     app_a.binaries,
@@ -145,6 +178,9 @@ coll = COLLECT(
     fridahook_exe,
     fridahook_a.binaries,
     fridahook_a.datas,
+    download_assets_exe,
+    download_assets_a.binaries,
+    download_assets_a.datas,
     strip=False,
     upx=True,
     upx_exclude=[],
