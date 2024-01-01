@@ -59,7 +59,7 @@ def loadMods(log: bool = True):
                     loadedModList["mods"].append(abInfo)
                     loadedModList["name"].append(modName)
                     loadedModList["path"].append(filePath)
-                    downloadName = modName.replace("/", "_").replace("#", "__").replace(".ab", ".dat")
+                    downloadName = os.path.splitext(modName.replace("/", "_").replace("#", "__"))[0]+".dat"
                     loadedModList["download"].append(downloadName)
 
         except:
