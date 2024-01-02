@@ -16,7 +16,7 @@ try:
     with open("config/config.json") as f:
         config = json.load(f)
 
-    config["userConfig"]["activityStartTs"] = max_activity_start_time - \
+    config["userConfig"]["activityMinStartTs"] = max_activity_start_time - \
         (7*24*60*60)
 
     with open("config/config.json", "w") as f:
