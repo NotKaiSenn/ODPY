@@ -84,6 +84,41 @@
             }
         },
         "activity": {
+            "BOSS_RUSH": {
+                "act1bossrush": {
+                    "relic": {
+                        "level": {
+                            "act1bossrush_relic_01": 3,
+                            "act1bossrush_relic_02": 3,
+                            "act1bossrush_relic_03": 3,
+                            "act1bossrush_relic_04": 3
+                        },
+                        "select": "act1bossrush_relic_01"
+                    }
+                },
+                "act2bossrush": {
+                    "relic": {
+                        "level": {
+                            "act2bossrush_relic_01": 3,
+                            "act2bossrush_relic_02": 3,
+                            "act2bossrush_relic_03": 3,
+                            "act2bossrush_relic_04": 3
+                        },
+                        "select": "act2bossrush_relic_01"
+                    }
+                },
+                "act3bossrush": {
+                    "relic": {
+                        "level": {
+                            "act3bossrush_relic_01": 3,
+                            "act3bossrush_relic_02": 3,
+                            "act3bossrush_relic_03": 3,
+                            "act3bossrush_relic_04": 3
+                        },
+                        "select": "act3bossrush_relic_01"
+                    }
+                }
+            },
             "TYPE_ACT24SIDE": {
                 "act24side": {
                     "tool": {

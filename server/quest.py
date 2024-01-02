@@ -320,3 +320,25 @@ def setTool():
         }
     }
     return data
+
+def relicSelect():
+    request_data = request.get_json()
+    activityId = request_data["activityId"]
+    relicId = request_data["relicId"]
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "activity": {
+                    "BOSS_RUSH": {
+                        activityId: {
+                            "relic": {
+                                "select": relicId
+                            }
+                        }
+                    }
+                }
+            },
+            "deleted": {}
+        }
+    }
+    return data
