@@ -12,7 +12,8 @@ HOST = server["host"]
 PORT = server["port"]
 MODE = server["mode"]
 NO_PROXY = server["noProxy"]
-ACTIVITY_START_TS = config["userConfig"]["activityStartTs"]
+ACTIVITY_MIN_START_TS = config["userConfig"]["activityMinStartTs"]
+ACTIVITY_MAX_START_TS = config["userConfig"]["activityMaxStartTs"]
 
 def on_message(message, data):
     print("[%s] => %s" % (message, data))
@@ -40,7 +41,9 @@ def main():
     ).replace(
         "@@@DOCTORATE_PORT@@@", str(PORT), 1
     ).replace(
-        "@@@DOCTORATE_ACTIVITY_START_TS@@@", str(ACTIVITY_START_TS), 1
+        "@@@DOCTORATE_ACTIVITY_MIN_START_TS@@@", str(ACTIVITY_MIN_START_TS), 1
+    ).replace(
+        "@@@DOCTORATE_ACTIVITY_MAX_START_TS@@@", str(ACTIVITY_MAX_START_TS), 1
     )
 
     script = session.create_script(s)

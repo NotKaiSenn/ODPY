@@ -65,6 +65,8 @@ def getFile(assetsHash, fileName):
             if fileName == mod and os.path.exists(path):
                 wrongSize = False
                 filePath = path
+                basePath = "mods"
+                fileName = os.path.basename(filePath)
 
     writeLog('/{}/{}'.format(version, fileName))
 

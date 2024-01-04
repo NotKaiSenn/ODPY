@@ -101,7 +101,8 @@
             "squadsAndFavs": false,
             "ui": false
         },
-        "activityStartTs": 1702627200,
+        "activityMinStartTs": 1702627200,
+        "activityMaxStartTs": 1704657599,
         "secretary": "char_2014_nian",
         "secretarySkinId": "char_2014_nian@nian#4",
         "background": "bg_kazimierz_1",

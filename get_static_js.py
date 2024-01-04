@@ -7,7 +7,8 @@ HOST = server["host"]
 PORT = server["port"]
 MODE = server["mode"]
 NO_PROXY = server["noProxy"]
-ACTIVITY_START_TS = config["userConfig"]["activityStartTs"]
+ACTIVITY_MIN_START_TS = config["userConfig"]["activityMinStartTs"]
+ACTIVITY_MAX_START_TS = config["userConfig"]["activityMaxStartTs"]
 
 with open("_.js", encoding="utf-8") as f:
     s = f.read()
@@ -17,7 +18,9 @@ s = s.replace(
 ).replace(
     "@@@DOCTORATE_PORT@@@", str(PORT), 1
 ).replace(
-    "@@@DOCTORATE_ACTIVITY_START_TS@@@", str(ACTIVITY_START_TS), 1
+    "@@@DOCTORATE_ACTIVITY_MIN_START_TS@@@", str(ACTIVITY_MIN_START_TS), 1
+).replace(
+    "@@@DOCTORATE_ACTIVITY_MAX_START_TS@@@", str(ACTIVITY_MAX_START_TS), 1
 )
 
 with open("_.static.js", "w", encoding="utf-8") as f:

@@ -594,15 +594,6 @@ def getMap(theme):
                 "y": 0
             }
         )
-        for i, node in enumerate(nodes_list):
-            if i == 0:
-                continue
-            node["next"] = [
-                {
-                    "x": x,
-                    "y": 0
-                }
-            ]
         nodes_list.append(
             {
                 "index": f"{x}00",

@@ -3,6 +3,8 @@ import socket
 import zipfile
 import hashlib
 from datetime import datetime
+import zlib
+import json
 
 
 def writeLog(data):
@@ -26,13 +28,41 @@ def loadMods(log: bool = True):
         if file != ".placeholder" and file.endswith(".dat"):
             fileList.append('./mods/' + file)
 
+    dat_file_infos = {}
+
     for filePath in fileList:
+        with open(filePath, "rb") as f:
+            file_content = f.read()
+            file_size = len(file_content)
+            file_crc32 = zlib.crc32(file_content)
+            dat_file_infos[filePath] = {
+                "size": file_size,
+                "crc32": file_crc32
+            }
+
+    mod_cache = None
+
+    if os.path.isfile("mods.json"):
+        with open("mods.json", encoding="utf-8") as f:
+            mod_cache = json.load(f)
+
+    mod_cache_valid = False
+
+    if mod_cache is not None:
+        cached_dat_file_infos = mod_cache["file"]
+        if dat_file_infos == cached_dat_file_infos:
+            mod_cache_valid = True
+
+    if mod_cache_valid:
+        writeLog(filePath + ' - \033[1;32mUsing Cached Mod...\033[0;0m')
+        return mod_cache["mod"]
+
+    for filePath in fileList:
+        if not zipfile.is_zipfile(filePath) or os.path.getsize(filePath) == 0:
+            continue
         modFile = zipfile.ZipFile(filePath, 'r')
 
         try:
-            if not zipfile.is_zipfile(filePath) and os.path.getsize(filePath) == 0:
-                continue
-
             for fileName, info in zip(modFile.namelist(), modFile.infolist()):
                 if not zipfile.ZipInfo.is_dir(info):
                     modName = fileName
@@ -59,10 +89,20 @@ def loadMods(log: bool = True):
                     loadedModList["mods"].append(abInfo)
                     loadedModList["name"].append(modName)
                     loadedModList["path"].append(filePath)
-                    downloadName = modName.replace("/", "_").replace("#", "__").replace(".ab", ".dat")
+                    downloadName = os.path.splitext(modName.replace("/", "_").replace("#", "__"))[0]+".dat"
                     loadedModList["download"].append(downloadName)
 
         except:
             writeLog(filePath + ' - \033[1;31mMod file loading failed...\033[0;0m')
+        modFile.close()
+
+    with open("mods.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "file": dat_file_infos,
+                "mod": loadedModList
+            }, f,
+            sort_keys=False, indent=4
+        )
 
     return loadedModList
