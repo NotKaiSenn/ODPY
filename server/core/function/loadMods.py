@@ -3,6 +3,7 @@ import socket
 import zipfile
 import hashlib
 from datetime import datetime
+import zlib
 
 
 def writeLog(data):
@@ -27,12 +28,11 @@ def loadMods(log: bool = True):
             fileList.append('./mods/' + file)
 
     for filePath in fileList:
+        if not zipfile.is_zipfile(filePath) or os.path.getsize(filePath) == 0:
+            continue
         modFile = zipfile.ZipFile(filePath, 'r')
 
         try:
-            if not zipfile.is_zipfile(filePath) and os.path.getsize(filePath) == 0:
-                continue
-
             for fileName, info in zip(modFile.namelist(), modFile.infolist()):
                 if not zipfile.ZipInfo.is_dir(info):
                     modName = fileName
@@ -64,5 +64,6 @@ def loadMods(log: bool = True):
 
         except:
             writeLog(filePath + ' - \033[1;31mMod file loading failed...\033[0;0m')
+        modFile.close()
 
     return loadedModList
