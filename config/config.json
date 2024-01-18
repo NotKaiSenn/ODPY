@@ -15,7 +15,7 @@
     },
     "version": {
         "android": {
-            "resVersion": "24-01-05-09-28-20-bd7062",
+            "resVersion": "24-01-12-07-52-32-80033a",
             "clientVersion": "2.1.41"
         }
     },
@@ -101,8 +101,8 @@
             "squadsAndFavs": false,
             "ui": false
         },
-        "activityMinStartTs": 1702627200,
-        "activityMaxStartTs": 1704657599,
+        "activityMinStartTs": 1704960000,
+        "activityMaxStartTs": 1706990399,
         "secretary": "char_2014_nian",
         "secretarySkinId": "char_2014_nian@nian#4",
         "background": "bg_kazimierz_1",
