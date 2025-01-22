@@ -15,8 +15,8 @@
     },
     "version": {
         "android": {
-            "resVersion": "25-01-08-07-44-44-3d8742",
-            "clientVersion": "2.4.21"
+            "resVersion": "25-01-21-15-29-57-98ea04",
+            "clientVersion": "2.4.41"
         }
     },
     "remote": {
@@ -29,9 +29,9 @@
             "sign": "sign",
             "content": {
                 "configVer": "5",
-                "funcVer": "V057",
+                "funcVer": "V058",
                 "configs": {
-                    "V057": {
+                    "V058": {
                         "override": true,
                         "network": {
                             "gs": "{server}",
@@ -101,8 +101,8 @@
             "squadsAndFavs": false,
             "ui": false
         },
-        "activityMinStartTs": 1733990400,
-        "activityMaxStartTs": 1736020799,
+        "activityMinStartTs": 1736913600,
+        "activityMaxStartTs": 1739908799,
         "secretary": "char_2014_nian",
         "secretarySkinId": "char_2014_nian@nian#4",
         "background": "bg_kazimierz_1",
